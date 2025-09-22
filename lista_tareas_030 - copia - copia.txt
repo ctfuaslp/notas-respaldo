@@ -1,0 +1,5 @@
+- Pagar facturas
+- Solicitar vacaciones
+- Comprar regalo cumpleaños
+
+[Fin del documento]

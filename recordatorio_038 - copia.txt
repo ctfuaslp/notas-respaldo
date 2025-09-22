@@ -1,0 +1,48 @@
+Este documento presenta una propuesta para implementar un nuevo sistema de gestión de contraseñas en toda la organización. El sistema actual ha demostrado ser vulnerable en las últimas pruebas de penetración, y varios empleados han admitido reutilizar contraseñas across diferentes servicios.
+
+La solución propuesta es implementar un password manager empresarial que permita almacenar y compartir credenciales de forma segura. El sistema debería integrarse con nuestro directorio activo para simplificar el management de usuarios y permisos. Además, debería incluir características para generar contraseñas fuertes y alertar sobre contraseñas comprometidas en breaches públicos.
+
+La implementación se realizaría en fases, comenzando con un piloto en el departamento de TI antes de expandirlo a toda la organización. El proyecto incluiría sesiones de training para asegurar que todos los empleados comprendan cómo usar el sistema correctamente y entiendan la importancia de las buenas prácticas de higiene de contraseñas. Estimamos que el proyecto completo tomará aproximadamente seis meses, con un costo inicial de licencias de $X y costos ongoing de mantenimiento de $Y anuales.
+
+En la clase de hoy revisamos los conceptos fundamentales de la criptografía asimétrica. Este tipo de criptografía utiliza un par de claves: una pública para cifrar y una privada para descifrar. Esto soluciona el problema de distribución de claves que existe en la criptografía simétrica, donde la misma clave se usa para cifrar y descifrar.
+
+El algoritmo RSA es uno de los sistemas de criptografía asimétrica más utilizados. Se basa en la dificultad computacional de factorizar números enteros muy grandes. La seguridad de RSA depende de que, si bien es fácil multiplicar dos números primos grandes para obtener un producto, es extremadamente difícil factorizar ese producto para recuperar los primos originales.
+
+En la práctica, RSA se utiliza a menudo para establecer canales seguros de comunicación, como en el protocolo HTTPS. Después de establecer una conexión segura usando RSA para intercambiar una clave simétrica, la comunicación continúa usando algoritmos simétricos como AES, que son más eficientes para grandes volúmenes de datos. Es importante recordar que la longitud de la clave RSA afecta directamente a su seguridad, con 2048 bits siendo el mínimo recomendado actualmente.
+
+// Este módulo maneja la autenticación de usuarios
+// TODO: Implementar autenticación de dos factores
+// TODO: Agregar logging de intentos fallidos
+// TODO: Revisar vulnerabilidades de timing attacks
+
+function authenticateUser(username, password) {
+  // Verificar si el usuario existe en la base de datos
+  const user = db.getUser(username);
+  
+  if (!user) {
+    return { success: false, message: 'Usuario no encontrado' };
+  }
+  
+  // Verificar la contraseña usando bcrypt
+  const passwordMatch = bcrypt.compareSync(password, user.hashedPassword);
+  
+  if (!passwordMatch) {
+    // Registrar intento fallido
+    logFailedAttempt(username);
+    return { success: false, message: 'Contraseña incorrecta' };
+  }
+  
+  // Generar token JWT
+  const token = generateJWT(user);
+  
+  return { success: true, token: token, user: user };
+}
+
+// Notas para futuras mejoras:
+// - Considerar implementar rate limiting para prevenir brute force
+// - Evaluar usar WebAuthn para autenticación sin contraseña
+// - Revisar expiración de tokens actual (24h podría ser demasiado)
+
+
+
+[Última modificación: 14/05/2020]

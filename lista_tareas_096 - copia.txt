@@ -1,0 +1,48 @@
+He estado pensando en crear una aplicación para ayudar a las personas a gestionar su huella digital. La idea es que los usuarios puedan ver dónde tienen cuentas activas, qué datos han compartido, y recibir alertas cuando sus datos aparezcan en breaches conocidos.
+
+La aplicación escanearía el correo electrónico del usuario para identificar servicios donde se haya registrado (basándose en correos de bienvenida, facturas, etc.). Luego proporcionaría un dashboard con todas estas cuentas, clasificadas por categorías y nivel de riesgo. Los usuarios podrían marcar cuentas que ya no usan y la aplicación les ayudaría a eliminarlas.
+
+La parte más desafiante sería la integración con los diferentes servicios para facilitar el proceso de eliminación de cuentas. Algunos servicios tienen procesos sencillos, pero otros requieren contactar al soporte técnico directamente. Tal vez podríamos crear una base de datos colaborativa con instrucciones para eliminar cuentas en diferentes servicios. Otra idea interesante sería incluir plantillas de emails para solicitar la eliminación de datos según el GDPR u otras regulaciones de privacidad.
+
+He estado ideando un proyecto para crear una plataforma de aprendizaje en línea especializada en seguridad informática. La plataforma incluiría cursos desde nivel básico hasta avanzado, con laboratorios prácticos donde los estudiantes puedan aplicar los conceptos aprendidos en entornos controlados.
+
+La estructura de los cursos seguiría un modelo modular, con cada módulo centrado en un tema específico como criptografía, análisis de malware, pruebas de penetración o forense digital. Cada módulo incluiría material teórico, demostraciones prácticas, ejercicios guiados y desafíos para que los estudiantes resuelvan por su cuenta. Los laboratorios se implementarían usando contenedores Docker para asegurar un entorno aislado y reproducible.
+
+Para hacer la plataforma más atractiva, estoy considerando incorporar elementos gamificados como puntos, insignias y tablas de clasificación. También me gustaría implementar un sistema de mentores donde profesionales experimentados puedan guiar a los estudiantes. El mayor desafío técnico será garantizar la seguridad de los laboratorios prácticos, especialmente aquellos que involucren técnicas ofensivas, para evitar posibles usos malintencionados.
+
+// Este módulo maneja la autenticación de usuarios
+// TODO: Implementar autenticación de dos factores
+// TODO: Agregar logging de intentos fallidos
+// TODO: Revisar vulnerabilidades de timing attacks
+
+function authenticateUser(username, password) {
+  // Verificar si el usuario existe en la base de datos
+  const user = db.getUser(username);
+  
+  if (!user) {
+    return { success: false, message: 'Usuario no encontrado' };
+  }
+  
+  // Verificar la contraseña usando bcrypt
+  const passwordMatch = bcrypt.compareSync(password, user.hashedPassword);
+  
+  if (!passwordMatch) {
+    // Registrar intento fallido
+    logFailedAttempt(username);
+    return { success: false, message: 'Contraseña incorrecta' };
+  }
+  
+  // Generar token JWT
+  const token = generateJWT(user);
+  
+  return { success: true, token: token, user: user };
+}
+
+// Notas para futuras mejoras:
+// - Considerar implementar rate limiting para prevenir brute force
+// - Evaluar usar WebAuthn para autenticación sin contraseña
+// - Revisar expiración de tokens actual (24h podría ser demasiado)
+
+
+
+[Última modificación: 05/03/2021]

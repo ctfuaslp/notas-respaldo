@@ -1,0 +1,4 @@
+def calcular_suma(n):
+    return sum(range(1, n+1))
+
+[Última modificación: hace más de 2 años]
