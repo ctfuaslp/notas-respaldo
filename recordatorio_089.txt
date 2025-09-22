@@ -1,0 +1,36 @@
+Este documento presenta una propuesta para implementar un nuevo sistema de gestión de contraseñas en toda la organización. El sistema actual ha demostrado ser vulnerable en las últimas pruebas de penetración, y varios empleados han admitido reutilizar contraseñas across diferentes servicios.
+
+La solución propuesta es implementar un password manager empresarial que permita almacenar y compartir credenciales de forma segura. El sistema debería integrarse con nuestro directorio activo para simplificar el management de usuarios y permisos. Además, debería incluir características para generar contraseñas fuertes y alertar sobre contraseñas comprometidas en breaches públicos.
+
+La implementación se realizaría en fases, comenzando con un piloto en el departamento de TI antes de expandirlo a toda la organización. El proyecto incluiría sesiones de training para asegurar que todos los empleados comprendan cómo usar el sistema correctamente y entiendan la importancia de las buenas prácticas de higiene de contraseñas. Estimamos que el proyecto completo tomará aproximadamente seis meses, con un costo inicial de licencias de $X y costos ongoing de mantenimiento de $Y anuales.
+
+A veces me pregunto cómo sería el mundo si la tecnología no hubiera avanzado tan rápidamente. Vivimos en una era donde la información está disponible instantáneamente, pero ¿realmente somos más sabios? Hay tantas distracciones que a veces siento que perdemos la capacidad de concentrarnos profundamente en un solo tema.
+
+Recuerdo cuando era niño y pasaba horas en la biblioteca investigando para mis tareas. El proceso era más lento, pero quizás más deliberado. Hoy en día, con Google y Wikipedia, podemos encontrar respuestas rápidas, pero no siempre profundizamos en los temas. Hay valor en la inmediatez, pero también en la reflexión pausada.
+
+Me pregunto cómo será el mundo dentro de veinte años. ¿Seguiremos dependiendo tanto de los smartphones? ¿La inteligencia artificial habrá reemplazado muchos trabajos? ¿Encontraremos un equilibrio entre la tecnología y nuestra humanidad? Son preguntas sin respuesta, pero interesantes de contemplar. Tal vez debería escribir más sobre estos temas, no solo dejarlos como pensamientos fugaces.
+
+Para la próxima semana:
+1. Revisar y responder todos los correos pendientes
+2. Preparar la presentación para la reunión del jueves
+3. Investigar opciones para mejorar la seguridad de la red WiFi
+4. Coordinar con el equipo de desarrollo los próximos sprints
+5. Revisar el performance del servidor después de los últimos cambios
+
+Proyectos a medio plazo:
+- Migrar la base de datos a la nueva versión
+- Implementar sistema de backup automatizado
+- Actualizar la documentación técnica
+- Capacitar al nuevo practicante
+- Evaluar nuevas herramientas de monitoring
+
+Metas personales:
+* Leer al menos un libro técnico este mes
+* Tomar un curso sobre cloud security
+* Mejorar mis habilidades de presentación
+* Establecer una rutina de ejercicio consistente
+* Dedicar más tiempo a proyectos personales de coding
+
+
+
+[Última modificación: 24/03/2020]

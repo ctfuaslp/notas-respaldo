@@ -1,0 +1,44 @@
+Este documento presenta una propuesta para implementar un nuevo sistema de gestión de contraseñas en toda la organización. El sistema actual ha demostrado ser vulnerable en las últimas pruebas de penetración, y varios empleados han admitido reutilizar contraseñas across diferentes servicios.
+
+La solución propuesta es implementar un password manager empresarial que permita almacenar y compartir credenciales de forma segura. El sistema debería integrarse con nuestro directorio activo para simplificar el management de usuarios y permisos. Además, debería incluir características para generar contraseñas fuertes y alertar sobre contraseñas comprometidas en breaches públicos.
+
+La implementación se realizaría en fases, comenzando con un piloto en el departamento de TI antes de expandirlo a toda la organización. El proyecto incluiría sesiones de training para asegurar que todos los empleados comprendan cómo usar el sistema correctamente y entiendan la importancia de las buenas prácticas de higiene de contraseñas. Estimamos que el proyecto completo tomará aproximadamente seis meses, con un costo inicial de licencias de $X y costos ongoing de mantenimiento de $Y anuales.
+
+Para la próxima semana:
+1. Revisar y responder todos los correos pendientes
+2. Preparar la presentación para la reunión del jueves
+3. Investigar opciones para mejorar la seguridad de la red WiFi
+4. Coordinar con el equipo de desarrollo los próximos sprints
+5. Revisar el performance del servidor después de los últimos cambios
+
+Proyectos a medio plazo:
+- Migrar la base de datos a la nueva versión
+- Implementar sistema de backup automatizado
+- Actualizar la documentación técnica
+- Capacitar al nuevo practicante
+- Evaluar nuevas herramientas de monitoring
+
+Metas personales:
+* Leer al menos un libro técnico este mes
+* Tomar un curso sobre cloud security
+* Mejorar mis habilidades de presentación
+* Establecer una rutina de ejercicio consistente
+* Dedicar más tiempo a proyectos personales de coding
+
+Recordatorios importantes:
+- Reunión con el equipo de seguridad el martes a las 10:00 AM. Preparar el reporte de vulnerabilidades.
+- Revisar el pull request #247 antes del miércoles. Tiene cambios críticos para el módulo de autenticación.
+- No olvidar enviar la solicitud de vacaciones para el próximo mes. La fecha límite es el viernes.
+- Llamar al proveedor de hosting para resolver el issue de latency. Referencia: ticket #HT-7832.
+- Preparar la demo para el cliente el próximo jueves. Enfocarse en las nuevas características de reporting.
+
+Recordatorios personales:
+- Cumpleaños de mamá el sábado. Comprar regalo y reservar en el restaurante.
+- Revisar el coche para el service anual. La luz de check engine está encendida again.
+- Pagar la factura de electricity antes del viernes para evitar recargos.
+- Devolver el libro a la biblioteca. Ya está vencido desde la semana pasada.
+- Comprar ingredientes para la cena de fin de semana. Invité a algunos amigos.
+
+
+
+[Última modificación: 29/07/2018]

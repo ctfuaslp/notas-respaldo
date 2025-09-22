@@ -1,0 +1,78 @@
+// Este módulo maneja la autenticación de usuarios
+// TODO: Implementar autenticación de dos factores
+// TODO: Agregar logging de intentos fallidos
+// TODO: Revisar vulnerabilidades de timing attacks
+
+function authenticateUser(username, password) {
+  // Verificar si el usuario existe en la base de datos
+  const user = db.getUser(username);
+  
+  if (!user) {
+    return { success: false, message: 'Usuario no encontrado' };
+  }
+  
+  // Verificar la contraseña usando bcrypt
+  const passwordMatch = bcrypt.compareSync(password, user.hashedPassword);
+  
+  if (!passwordMatch) {
+    // Registrar intento fallido
+    logFailedAttempt(username);
+    return { success: false, message: 'Contraseña incorrecta' };
+  }
+  
+  // Generar token JWT
+  const token = generateJWT(user);
+  
+  return { success: true, token: token, user: user };
+}
+
+// Notas para futuras mejoras:
+// - Considerar implementar rate limiting para prevenir brute force
+// - Evaluar usar WebAuthn para autenticación sin contraseña
+// - Revisar expiración de tokens actual (24h podría ser demasiado)
+
+Para la próxima semana:
+1. Revisar y responder todos los correos pendientes
+2. Preparar la presentación para la reunión del jueves
+3. Investigar opciones para mejorar la seguridad de la red WiFi
+4. Coordinar con el equipo de desarrollo los próximos sprints
+5. Revisar el performance del servidor después de los últimos cambios
+
+Proyectos a medio plazo:
+- Migrar la base de datos a la nueva versión
+- Implementar sistema de backup automatizado
+- Actualizar la documentación técnica
+- Capacitar al nuevo practicante
+- Evaluar nuevas herramientas de monitoring
+
+Metas personales:
+* Leer al menos un libro técnico este mes
+* Tomar un curso sobre cloud security
+* Mejorar mis habilidades de presentación
+* Establecer una rutina de ejercicio consistente
+* Dedicar más tiempo a proyectos personales de coding
+
+Para la próxima semana:
+1. Revisar y responder todos los correos pendientes
+2. Preparar la presentación para la reunión del jueves
+3. Investigar opciones para mejorar la seguridad de la red WiFi
+4. Coordinar con el equipo de desarrollo los próximos sprints
+5. Revisar el performance del servidor después de los últimos cambios
+
+Proyectos a medio plazo:
+- Migrar la base de datos a la nueva versión
+- Implementar sistema de backup automatizado
+- Actualizar la documentación técnica
+- Capacitar al nuevo practicante
+- Evaluar nuevas herramientas de monitoring
+
+Metas personales:
+* Leer al menos un libro técnico este mes
+* Tomar un curso sobre cloud security
+* Mejorar mis habilidades de presentación
+* Establecer una rutina de ejercicio consistente
+* Dedicar más tiempo a proyectos personales de coding
+
+
+
+[Última modificación: 25/11/2015]

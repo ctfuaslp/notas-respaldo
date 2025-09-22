@@ -1,0 +1,23 @@
+He estado ideando un proyecto para crear una plataforma de aprendizaje en línea especializada en seguridad informática. La plataforma incluiría cursos desde nivel básico hasta avanzado, con laboratorios prácticos donde los estudiantes puedan aplicar los conceptos aprendidos en entornos controlados.
+
+La estructura de los cursos seguiría un modelo modular, con cada módulo centrado en un tema específico como criptografía, análisis de malware, pruebas de penetración o forense digital. Cada módulo incluiría material teórico, demostraciones prácticas, ejercicios guiados y desafíos para que los estudiantes resuelvan por su cuenta. Los laboratorios se implementarían usando contenedores Docker para asegurar un entorno aislado y reproducible.
+
+Para hacer la plataforma más atractiva, estoy considerando incorporar elementos gamificados como puntos, insignias y tablas de clasificación. También me gustaría implementar un sistema de mentores donde profesionales experimentados puedan guiar a los estudiantes. El mayor desafío técnico será garantizar la seguridad de los laboratorios prácticos, especialmente aquellos que involucren técnicas ofensivas, para evitar posibles usos malintencionados.
+
+Estimado equipo de desarrollo,
+
+Me dirijo a ustedes para compartir algunas ideas que he estado considerando para nuestro próximo proyecto. He notado que nuestra aplicación actual carece de algunas características que podrían mejorar significativamente la experiencia del usuario. En particular, creo que deberíamos considerar la implementación de un sistema de notificaciones más robusto y una integración más fluida con las redes sociales.
+
+He investigado varias soluciones técnicas que podríamos adoptar. Una opción prometedora es utilizar Firebase para las notificaciones push, ya que ofrece una integración sencilla con ambas plataformas móviles. Para la integración con redes sociales, podríamos utilizar las APIs oficiales de Facebook y Twitter, aunque esto requeriría manejar adecuadamente los permisos y la autenticación de usuarios.
+
+Me gustaría programar una reunión la próxima semana para discutir estas ideas en detalle. Por favor, hágame saber qué día y hora les funciona mejor. Adjunto encontrarán un documento con un análisis más detallado de las opciones técnicas y los recursos que necesitaríamos para implementar estas características.
+
+En la clase de hoy revisamos los conceptos fundamentales de la criptografía asimétrica. Este tipo de criptografía utiliza un par de claves: una pública para cifrar y una privada para descifrar. Esto soluciona el problema de distribución de claves que existe en la criptografía simétrica, donde la misma clave se usa para cifrar y descifrar.
+
+El algoritmo RSA es uno de los sistemas de criptografía asimétrica más utilizados. Se basa en la dificultad computacional de factorizar números enteros muy grandes. La seguridad de RSA depende de que, si bien es fácil multiplicar dos números primos grandes para obtener un producto, es extremadamente difícil factorizar ese producto para recuperar los primos originales.
+
+En la práctica, RSA se utiliza a menudo para establecer canales seguros de comunicación, como en el protocolo HTTPS. Después de establecer una conexión segura usando RSA para intercambiar una clave simétrica, la comunicación continúa usando algoritmos simétricos como AES, que son más eficientes para grandes volúmenes de datos. Es importante recordar que la longitud de la clave RSA afecta directamente a su seguridad, con 2048 bits siendo el mínimo recomendado actualmente.
+
+
+
+[Última modificación: 31/10/2015]
